@@ -1,7 +1,7 @@
 Feature: : Adding a new address to the user profile
 
   Scenario Outline: User adds a new address with valid information
-    Given The user logs in
+    Given The user logs
     And The user navigates to the My Account section
     And The user opens the address section
     When The user fills in the new address form with:
@@ -16,4 +16,5 @@ Feature: : Adding a new address to the user profile
 
     Examples:
       | company       | phoneNumber | street       | city         | state       | zipCode       | country       |
+      | companyRandom | phoneRandom | streetRandom | streetRandom | stateRandom | zipCodeRandom | countryRandom |
       | companyRandom | phoneRandom | streetRandom | streetRandom | stateRandom | zipCodeRandom | countryRandom |

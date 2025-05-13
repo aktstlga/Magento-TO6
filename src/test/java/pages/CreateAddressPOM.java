@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class CreateAddress {
-    public CreateAddress() {
+public class CreateAddressPOM {
+    public CreateAddressPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
     @FindBy(linkText = "Address Book")

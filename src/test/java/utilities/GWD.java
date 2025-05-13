@@ -16,6 +16,9 @@ public class GWD {
         Locale.setDefault(new Locale("EN"));
         System.setProperty("user.language","EN");
 
+        if (threadBrowserName.get() == null)
+            threadBrowserName.set("chrome");
+
         if (threadDriver.get() == null) {
 
             switch (threadBrowserName.get()) {
