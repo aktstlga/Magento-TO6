@@ -1,0 +1,8 @@
+@Smoke @Regression @Accounts
+Feature: Register functionality
+
+  Scenario:Register with valid information
+    Given Navigate to Magento
+    And Navigate to Create an Account Site
+    When Enter Signing Up Informations and click on Create an Account button
+
