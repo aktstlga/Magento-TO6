@@ -5,10 +5,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class CreateAddress {
-    public CreateAddress() {
+public class CreateAddressPOM {
+    public CreateAddressPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
+
     @FindBy(linkText = "Address Book")
     public WebElement addressBookButton;
 
@@ -27,6 +28,21 @@ public class CreateAddress {
     @FindBy(id = "region_id")
     public WebElement selectState;
 
-    @FindBy(id = "zip")
+    @FindBy(id = "country")
     public WebElement selectCountry;
+
+    @FindBy(id = "zip")
+    public WebElement zipCode;
+
+    @FindBy(css = "div[class='field region required']")
+    public WebElement requiredId;
+
+    @FindBy(id = "region")
+    public WebElement stateSendKeys;
+
+    @FindBy(css = "button[type='submit'][data-action='save-address']")
+    public  WebElement saveAddressButton;
+
+    @FindBy(css="div[data-ui-id='message-success'] > *:nth-child(1)")
+    public  WebElement successText;
 }

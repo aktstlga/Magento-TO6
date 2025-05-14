@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -67,7 +68,14 @@ public class ReusableMethods {
         wait.until(ExpectedConditions.visibilityOf(element));
         Assert.assertTrue(element.getText().toLowerCase().equals(text.toLowerCase()));
     }
-    public void verifyUrlContains(String text){
+
+    public void verifyUrlContains(String text) {
         wait.until(ExpectedConditions.urlContains(text));
+    }
+
+    public void mySelect(WebElement element, String text) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+        Select select = new Select(element);
+        select.selectByVisibleText(text.trim());
     }
 }
