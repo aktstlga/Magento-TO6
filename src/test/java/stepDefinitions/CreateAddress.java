@@ -1,12 +1,14 @@
 package stepDefinitions;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import net.datafaker.Faker;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import pages.CreateAddressPOM;
 import utilities.GWD;
 import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class CreateAddress {
     ReusableMethods reusableMethods = new ReusableMethods();
@@ -32,14 +34,36 @@ public class CreateAddress {
         reusableMethods.verifyUrlContains("address");
     }
 
-    @When("The user fills in the new address form with:")
-    public void the_user_fills_in_the_new_address_form_with(DataTable company, DataTable phoneNumber, DataTable street, DataTable city, DataTable state, DataTable zipCode, DataTable country) {
-
-    }
-
     @When("The user saves the address")
     public void the_user_saves_the_address() {
         System.out.println("asd");
 
+    }
+
+    @When("The user fills in the company, phone number, and street fields with {string}, {string}, and {string}")
+    public void theUserFillsInTheCompanyPhoneNumberAndStreetFieldsWithAnd(String arg0, String arg1, String arg2) {
+        reusableMethods.mySendKeys(createAddress.companyNamePlaceholder, arg0);
+        reusableMethods.mySendKeys(createAddress.telephoneNumberPlaceholder, arg1);
+        reusableMethods.mySendKeys(createAddress.streetAddressOne, arg2);
+    }
+
+    @And("The user selects {string} as country, which enables selection of {string}, {string}, and {string}")
+    public void theUserSelectsAsCountryWhichEnablesSelectionOfAnd(String countryName, String city, String state, String zipCode) {
+        reusableMethods.myClick(createAddress.selectCountry);
+        reusableMethods.mySelect(createAddress.selectCountry,countryName);
+        reusableMethods.myClick(createAddress.selectCountry);
+
+        reusableMethods.mySendKeys(createAddress.zipCode, zipCode);
+        reusableMethods.mySendKeys(createAddress.cityNamePlaceholder, city);
+
+        List<WebElement> stateField = GWD.getDriver().findElements(By.cssSelector("div[class='field region required']"));
+
+        if(stateField.isEmpty()){
+            reusableMethods.myClick(createAddress.selectState);
+            reusableMethods.mySelect(createAddress.selectState, state);
+            reusableMethods.myClick(createAddress.selectState);
+        }else {
+            reusableMethods.mySendKeys(createAddress.stateSendKeys,state);
+        }
     }
 }
