@@ -9,5 +9,6 @@ Feature: : Adding a new address to the user profile
     And The user saves the address
 
     Examples:
-      | company       | phoneNumber | street       | city | state | zipCode       | country        |
-      | companyRandom | phoneRandom | streetRandom | city | asd   | zipCodeRandom | United Kingdom |
+      | company       | phoneNumber | street       | city     | state   | zipCode | country        |
+      | companyRandom | phoneRandom | streetRandom | city     | asd     | AB12    | United Kingdom |
+      | TechnoStudy   | 1233333     | Michigan.asd | New York | Alabama | AB12    | United States  |

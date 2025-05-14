@@ -39,4 +39,10 @@ public class CreateAddressPOM {
 
     @FindBy(id = "region")
     public WebElement stateSendKeys;
+
+    @FindBy(css = "button[type='submit'][data-action='save-address']")
+    public  WebElement saveAddressButton;
+
+    @FindBy(css="div[data-ui-id='message-success'] > *:nth-child(1)")
+    public  WebElement successText;
 }
