@@ -59,9 +59,7 @@ public class CreateAddress {
             reusableMethods.mySendKeys(createAddress.stateSendKeys, state);
 
         } else {
-            reusableMethods.myClick(createAddress.selectState);
             reusableMethods.mySelect(createAddress.selectState, state);
-            reusableMethods.myClick(createAddress.selectState);
         }
 
         reusableMethods.Wait(6);
