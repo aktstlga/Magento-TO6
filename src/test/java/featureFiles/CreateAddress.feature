@@ -1,7 +1,9 @@
+@RegressionT
 Feature: : Adding a new address to the user profile
+  Background:
+    Given The user logs
 
   Scenario Outline: User adds a new address with valid information
-    Given The user logs
     And The user navigates to the My Account section
     And The user opens the address section
     When The user fills in the company, phone number, and street fields with "<company>", "<phoneNumber>", and "<street>"

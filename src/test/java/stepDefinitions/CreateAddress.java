@@ -2,10 +2,9 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import net.datafaker.Faker;
-import org.apache.commons.math3.analysis.function.Exp;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import pages.CreateAddressPOM;
 import utilities.GWD;
 import utilities.ReusableMethods;
@@ -23,39 +22,33 @@ public class CreateAddress {
         GWD.getDriver().findElement(By.id("email")).sendKeys("deneme123321@gmail.com");
         GWD.getDriver().findElement(By.id("pass")).sendKeys("TOLgadeneme123321");
         GWD.getDriver().findElement(By.id("send2")).click();
+        reusableMethods.myClick(createAddress.mainPageButton);
     }
 
     @Given("The user navigates to the My Account section")
     public void the_user_navigates_to_the_my_account_section() {
+        reusableMethods.myClick(createAddress.myAccountButton);
+        reusableMethods.myClick(createAddress.myAccountNavigationButton);
         reusableMethods.verifyUrlContains("account");
     }
 
     @Given("The user opens the address section")
     public void the_user_opens_the_address_section() {
-        List<WebElement> stateField = GWD.getDriver().findElements(By.linkText(""));
         reusableMethods.myClick(createAddress.addressBookButton);
         reusableMethods.verifyUrlContains("address");
-    }
-
-    @When("The user saves the address")
-    public void the_user_saves_the_address() {
-        reusableMethods.myClick(createAddress.saveAddressButton);
-        reusableMethods.verifyUrlContains("index");
-        reusableMethods.verifyContainsText(createAddress.successText,"saved the address");
+        reusableMethods.myClick(createAddress.addAddressButton);
     }
 
     @When("The user fills in the company, phone number, and street fields with {string}, {string}, and {string}")
-    public void theUserFillsInTheCompanyPhoneNumberAndStreetFieldsWithAnd(String arg0, String arg1, String arg2) {
-        reusableMethods.mySendKeys(createAddress.companyNamePlaceholder, arg0);
-        reusableMethods.mySendKeys(createAddress.telephoneNumberPlaceholder, arg1);
-        reusableMethods.mySendKeys(createAddress.streetAddressOne, arg2);
+    public void theUserFillsInTheCompanyPhoneNumberAndStreetFieldsWithAnd(String company, String phoneNumber, String street) {
+        reusableMethods.mySendKeys(createAddress.companyNamePlaceholder, company);
+        reusableMethods.mySendKeys(createAddress.telephoneNumberPlaceholder, phoneNumber);
+        reusableMethods.mySendKeys(createAddress.streetAddressOne, street);
     }
 
     @And("The user selects {string} as country, which enables selection of {string}, {string}, and {string}")
     public void theUserSelectsAsCountryWhichEnablesSelectionOfAnd(String countryName, String city, String state, String zipCode) {
-        reusableMethods.myClick(createAddress.selectCountry);
         reusableMethods.mySelect(createAddress.selectCountry, countryName);
-        reusableMethods.myClick(createAddress.selectCountry);
 
         reusableMethods.mySendKeys(createAddress.zipCode, zipCode);
         reusableMethods.mySendKeys(createAddress.cityNamePlaceholder, city);
@@ -70,5 +63,15 @@ public class CreateAddress {
             reusableMethods.mySelect(createAddress.selectState, state);
             reusableMethods.myClick(createAddress.selectState);
         }
+
+        reusableMethods.Wait(6);
+        reusableMethods.myClick(createAddress.saveAddressButton);
+    }
+
+    @When("The user saves the address")
+    public void the_user_saves_the_address() {
+        reusableMethods.verifyUrlContains("index");
+        reusableMethods.verifyContainsText(createAddress.successText, "saved");
+        GWD.quitDriver();
     }
 }

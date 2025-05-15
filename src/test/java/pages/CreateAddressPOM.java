@@ -41,8 +41,20 @@ public class CreateAddressPOM {
     public WebElement stateSendKeys;
 
     @FindBy(css = "button[type='submit'][data-action='save-address']")
-    public  WebElement saveAddressButton;
+    public WebElement saveAddressButton;
 
-    @FindBy(css="div[data-ui-id='message-success'] > *:nth-child(1)")
-    public  WebElement successText;
+    @FindBy(css = "div[data-ui-id='message-success'] > *:nth-child(1)")
+    public WebElement successText;
+
+    @FindBy(css = "button[title='Add New Address']")
+    public WebElement addAddressButton;
+
+    @FindBy(css = "a[class='logo'] > *:nth-child(1)")
+    public WebElement mainPageButton;
+
+    @FindBy(xpath = "/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button")
+    public WebElement myAccountButton;
+
+    @FindBy(linkText = "My Account")
+    public WebElement myAccountNavigationButton;
 }
