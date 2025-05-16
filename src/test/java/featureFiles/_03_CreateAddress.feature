@@ -1,4 +1,4 @@
-@RegressionT
+@Regression
 Feature: : Adding a new address to the user profile
   Background:
     Given The user logs

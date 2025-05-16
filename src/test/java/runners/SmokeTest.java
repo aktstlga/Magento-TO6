@@ -4,7 +4,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
-        tags = "@ASDDDSA",
+        tags = "@SmokeTest",
         features = {"src/test/java/featureFiles"},
         glue = {"stepDefinitions"}
 )
