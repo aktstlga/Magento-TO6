@@ -12,8 +12,8 @@ public class _02_Login {
 
     @Given("Navigate to Magento and Login Page")
     public void navigate_to_magento_and_login_page() {
-        GWD.getDriver().get(ConfigReader.getProperty("URL"));
-        reusableMethods.jsClick(loginElements.signInButtonOnMainPage);
+        GWD.getDriver().get("https://magento.softwaretestingboard.com/");
+        reusableMethods.myActionClick(loginElements.signInButtonOnMainPage);
         reusableMethods.verifyUrlContains("account");
     }
 

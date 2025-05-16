@@ -79,4 +79,11 @@ public class ReusableMethods {
         Select select = new Select(element);
         select.selectByVisibleText(text.trim());
     }
+
+    public void myActionClick(WebElement element) {
+        scrollToElement(element);
+        wait.until(ExpectedConditions.visibilityOf(element));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+        action.moveToElement(element).click().build().perform();
+    }
 }

@@ -10,7 +10,7 @@ public class LoginPOM {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(partialLinkText = "Sign")
+    @FindBy(xpath = "//a[text()='Sign In']")
     public WebElement signInButtonOnMainPage;
 
     @FindBy(id = "email")
