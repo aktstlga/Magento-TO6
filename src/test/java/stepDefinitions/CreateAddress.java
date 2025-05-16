@@ -49,19 +49,16 @@ public class CreateAddress {
     @And("The user selects {string} as country, which enables selection of {string}, {string}, and {string}")
     public void theUserSelectsAsCountryWhichEnablesSelectionOfAnd(String countryName, String city, String state, String zipCode) {
         reusableMethods.mySelect(createAddress.selectCountry, countryName);
-
         reusableMethods.mySendKeys(createAddress.zipCode, zipCode);
         reusableMethods.mySendKeys(createAddress.cityNamePlaceholder, city);
 
         List<WebElement> stateField = GWD.getDriver().findElements(By.cssSelector("div[class='field region required']"));
-
         if (stateField.isEmpty()) {
             reusableMethods.mySendKeys(createAddress.stateSendKeys, state);
 
         } else {
             reusableMethods.mySelect(createAddress.selectState, state);
         }
-
         reusableMethods.Wait(6);
         reusableMethods.myClick(createAddress.saveAddressButton);
     }

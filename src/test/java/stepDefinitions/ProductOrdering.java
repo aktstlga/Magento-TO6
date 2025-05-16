@@ -16,14 +16,6 @@ public class ProductOrdering {
     ProductOrderingPOM page = new ProductOrderingPOM();
     ReusableMethods reusableMethods = new ReusableMethods();
 
-    @Given("The user logs")
-    public void the_user_logs_in() {
-        GWD.getDriver().get("https://magento.softwaretestingboard.com/customer/account/login/");
-        GWD.getDriver().findElement(By.id("email")).sendKeys("deneme123321@gmail.com");
-        GWD.getDriver().findElement(By.id("pass")).sendKeys("TOLgadeneme123321");
-        GWD.getDriver().findElement(By.id("send2")).click();
-    }
-
     @When("The user adds a random product to the cart")
     public void theUserAddsRandomProductToCart() throws InterruptedException {
         List<WebElement> products = GWD.getDriver().findElements(By.cssSelector("a.product-item-link"));
