@@ -1,7 +1,10 @@
 @Regression
 Feature: : Adding a new address to the user profile
+
   Background:
-    Given The user logs
+    Given Navigate to Magento and Login Page
+    When Enter E-mail and and password and click on the login button
+    Then User should login successfully
 
   Scenario Outline: User adds a new address with valid information
     And The user navigates to the My Account section
