@@ -13,8 +13,8 @@ public class _02_Login {
     @Given("Navigate to Magento and Login Page")
     public void navigate_to_magento_and_login_page() {
         GWD.getDriver().get("https://magento.softwaretestingboard.com/");
+        reusableMethods.myClick(loginElements.signInButtonOnMainPage);
 
-        GWD.getDriver().navigate().to("https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/");
         reusableMethods.verifyUrlContains("account");
     }
 
