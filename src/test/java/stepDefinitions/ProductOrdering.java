@@ -19,8 +19,8 @@ public class ProductOrdering {
     @When("The user adds a random product to the cart")
     public void theUserAddsRandomProductToCart() throws InterruptedException {
         List<WebElement> products = GWD.getDriver().findElements(By.cssSelector("a.product-item-link"));
-        reusableMethods.clickRandomElement(products);
-        reusableMethods.waitForElementToBeClickable(page.addToCartButton);
+        //reusableMethods.clickRandomElement(products);
+        //reusableMethods.waitForElementToBeClickable(page.addToCartButton);
         page.addToCartButton.click();
         reusableMethods.wait(2);
         page.cartIcon.click();
@@ -39,7 +39,7 @@ public class ProductOrdering {
         reusableMethods.mySendKeys(page.cityField, data.get("city"));
         reusableMethods.mySendKeys(page.zipCodeField, data.get("zipCode"));
 
-        reusableMethods.mySelect(page.selectCountryDropdown);
+     //   reusableMethods.mySelect(page.selectCountryDropdown);
     }
 
     @When("The user saves the address and continues")

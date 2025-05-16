@@ -13,6 +13,7 @@ import java.time.Duration;
 
 public class ReusableMethods {
     public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+    public Actions action = new Actions(GWD.getDriver());
 
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
