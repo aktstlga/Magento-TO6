@@ -13,14 +13,15 @@ public class _02_Login {
     @Given("Navigate to Magento and Login Page")
     public void navigate_to_magento_and_login_page() {
         GWD.getDriver().get("https://magento.softwaretestingboard.com/");
-        reusableMethods.myActionClick(loginElements.signInButtonOnMainPage);
+
+        GWD.getDriver().navigate().to("https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/");
         reusableMethods.verifyUrlContains("account");
     }
 
     @When("Enter E-mail and and password and click on the login button")
     public void enter_e_mail_and_and_password_and_click_on_the_login_button() {
-        reusableMethods.mySendKeys(loginElements.emailPlaceholder, ConfigReader.getProperty("Email"));
-        reusableMethods.mySendKeys(loginElements.passwordPlaceholder, ConfigReader.getProperty("Password"));
+        reusableMethods.mySendKeys(loginElements.emailPlaceholder, ConfigReader.getProperty("email"));
+        reusableMethods.mySendKeys(loginElements.passwordPlaceholder, ConfigReader.getProperty("password"));
         reusableMethods.myClick(loginElements.loginClickButton);
     }
 

@@ -31,4 +31,7 @@ public class Register extends ReusableMethods {
 
     @FindBy(css = "button[class='action submit primary']")
     public WebElement accountButton;
+
+    @FindBy(css = "a[class='logo'] > *:nth-child(1)")
+    public  WebElement mainPageButton;
 }

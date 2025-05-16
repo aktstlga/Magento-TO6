@@ -16,6 +16,7 @@ public class _01_Register {
     @Given("Navigate to Magento")
     public void navigate_to_campus() {
         GWD.getDriver().get(ConfigReader.getProperty("URL"));
+        GWD.getDriver().navigate().refresh();
     }
 
     @And("Navigate to Create an Account Site")
