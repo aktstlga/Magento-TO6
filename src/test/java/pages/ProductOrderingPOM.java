@@ -5,61 +5,45 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-import java.util.List;
-
 public class ProductOrderingPOM {
+
     public ProductOrderingPOM() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(css = "button#product-addtocart-button")
-    public WebElement addToCartButton;
+    @FindBy(xpath = "//*[text()='Men']")
+    public WebElement menMenu;
+
+    @FindBy(xpath = "//a[@title='Hero Hoodie']")
+    public WebElement product;
+
+    @FindBy(xpath = "//div[@option-label='S']")
+    public WebElement size;
+
+    @FindBy(id = "option-label-color-93-item-49")
+    public WebElement color;
+
+    @FindBy(xpath = "//input[@id='qty']")
+    public WebElement quantity;
+
+    @FindBy(xpath = "//span[text()='Add to Cart']")
+    public WebElement addToCart;
 
     @FindBy(css = "a.action.showcart")
-    public WebElement cartIcon;
+    public WebElement cartButton;
 
-    @FindBy(css = "a.action.viewcart")
-    public WebElement viewCartButton;
+    @FindBy(id = "top-cart-btn-checkout")
+    public WebElement proceedToCheckout;
 
-    @FindBy(css = "button[title='Proceed to Checkout']")
-    public WebElement proceedToCheckoutButton;
-
-    @FindBy(id = "company")
-    public WebElement companyNameField;
-
-    @FindBy(id = "telephone")
-    public WebElement phoneField;
-
-    @FindBy(id = "street_1")
-    public WebElement streetField;
-
-    @FindBy(id = "city")
-    public WebElement cityField;
-
-    @FindBy(id = "country")
-    public WebElement selectCountryDropdown;
-
-    @FindBy(id = "zip")
-    public WebElement zipCodeField;
-
-    @FindBy(css = "button[data-action='save-address']")
-    public WebElement saveAddressButton;
+    @FindBy(css = "input[value='flatrate_flatrate']")
+    public WebElement flatRateShippingRadio;
 
     @FindBy(css = "button.continue")
-    public WebElement nextToPaymentButton;
-
-    @FindBy(css = "tr.item")
-    public List<WebElement> shippingMethods;
-
-    @FindBy(css = "input[name='billing-address-same-as-shipping']")
-    public WebElement billingSameAsShippingChecked;
+    public WebElement nextButton;
 
     @FindBy(css = "button[title='Place Order']")
     public WebElement placeOrderButton;
 
-    @FindBy(css = ".checkout-success p span")
-    public WebElement orderNumber;
-
-    @FindBy(css = ".checkout-success p")
-    public WebElement successMessage;
+    @FindBy(css = "div.checkout-success")
+    public WebElement orderSuccess;
 }
