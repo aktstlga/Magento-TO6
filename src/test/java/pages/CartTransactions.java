@@ -40,4 +40,37 @@ public class CartTransactions extends ReusableMethods {
 
     @FindBy(xpath = "//*[text()='Add to Cart']")
     public WebElement addbutton;
+
+    @FindBy(xpath = "(//*[text()='Gear'])[1]")
+    public WebElement gear;
+
+    @FindBy(xpath = "//li[@class='level1 nav-4-1 category-item first ui-menu-item']/a/span")
+    public WebElement bags;
+
+    @FindBy(xpath = " //*[text()='Women']")
+    public WebElement women;
+
+    @FindBy(xpath = "(//*[text()='Tops'])[1]")
+    public WebElement tops;
+
+    @FindBy(xpath = "(//*[text()='Tees'])[1]")
+    public WebElement tees;
+
+    @FindBy(xpath = "//a[@class='logo']/img")
+    public WebElement homepage;
+
+    @FindBy(xpath = "(//*[text()='Tops'])[2]")
+    public WebElement tops2;
+
+    @FindBy(xpath = "(//*[text()='Jackets'])[2]")
+    public WebElement jackets;
+
+    @FindBy(xpath = "//*[text()='Training']")
+    public WebElement training;
+
+    @FindBy(xpath = "//*[text()='Video Download']")
+    public WebElement video;
+
+
+
 }
