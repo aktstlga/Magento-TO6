@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import pages.ProductOrderingPOM;
+import pages.ProductOrdering;
 import utilities.GWD;
 import utilities.ReusableMethods;
 
@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class _06_ProductOrdering {
 
-    ProductOrderingPOM p = new ProductOrderingPOM();
+    ProductOrdering p = new ProductOrdering();
     ReusableMethods r = new ReusableMethods();
 
     @And("User selects a product from Men's section and adds it to the cart")

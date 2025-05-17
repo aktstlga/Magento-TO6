@@ -5,9 +5,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class ProductOrderingPOM {
+public class ProductOrdering {
 
-    public ProductOrderingPOM() {
+    public ProductOrdering() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
