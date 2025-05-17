@@ -1,15 +1,10 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-import org.openqa.selenium.WebElement;
 import pages.CartTransactions;
-
-import java.util.List;
-import java.util.Random;
 
 public class _05_CartTransactions {
     CartTransactions c = new CartTransactions();
-    Random random = new Random();
 
     @When("User logged in with valid credentials")
     public void userLoggedInWithValidCredentials() {
