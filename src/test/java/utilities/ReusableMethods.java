@@ -46,6 +46,16 @@ public class ReusableMethods {
         js.executeScript("arguments[0].click();", element);
     }
 
+    public void clickWithJS(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
+
+    public void WaitUntilVisible(WebElement element) {
+        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(10));
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
+
     public int randomGenerator(int range) {
         return (int) (Math.random() * range);
     }
