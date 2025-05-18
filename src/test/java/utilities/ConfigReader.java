@@ -42,6 +42,10 @@ public class ConfigReader {
                 String password = dataFaker.regexify("[A-Z]{2}[a-z]{3}[0-9]{2}[@#]");
                 properties.setProperty(keyword, password);
                 break;
+            case "firstName":
+                String name = dataFaker.name().firstName();
+                properties.setProperty(keyword, firstName);
+                break;
         }
 
         FileOutputStream outputFile = null;

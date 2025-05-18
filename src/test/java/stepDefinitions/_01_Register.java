@@ -27,11 +27,12 @@ public class _01_Register {
 
     @When("Enter Signing Up Informations and click on Create an Account button")
     public void enterSigningUpInformationsAndClickOnCreateAnAccountButton() {
-        register.mySendKeys(register.firstName, dataFaker.name().firstName());
-        register.mySendKeys(register.lastName, dataFaker.name().lastName());
-
+        ConfigReader.updateProperty("firstName");
         ConfigReader.updateProperty("email");
         ConfigReader.updateProperty("password");
+
+        register.mySendKeys(register.firstName, ConfigReader.getProperty("firstName"));
+        register.mySendKeys(register.lastName, dataFaker.name().lastName());
         register.mySendKeys(register.eMail, ConfigReader.getProperty("email"));
         register.mySendKeys(register.password, ConfigReader.getProperty("password"));
         register.mySendKeys(register.confingPassword, ConfigReader.getProperty("password"));
