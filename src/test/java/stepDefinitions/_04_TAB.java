@@ -10,7 +10,7 @@ public class _04_TAB {
     CartTransactions c = new CartTransactions();
     Actions actions=new Actions(GWD.getDriver());
 
-    @When("In the user tab menu, navigate to Women branches")
+    @Given("In the user tab menu, navigate to Women branches")
     public void ınTheUserTabMenuHoverOverWomen() {
         actions.moveToElement(c.women)
                 .moveToElement(c.tops)
@@ -21,7 +21,7 @@ public class _04_TAB {
         c.myClick(c.homepage);
     }
 
-    @When("In the user tab menu, navigate to Men branches")
+    @Then("In the user tab menu, navigate to Men branches")
     public void ınTheUserTabMenuHoverOverMen() {
         actions.moveToElement(c.men)
                 .moveToElement(c.tops2)
@@ -32,7 +32,7 @@ public class _04_TAB {
         c.myClick(c.homepage);
     }
 
-    @When("In the user tab menu, navigate to Gear")
+    @And("In the user tab menu, navigate to Gear")
     public void navigating_tab_menus() {
         actions.moveToElement(c.gear)
                 .moveToElement(c.bags)
@@ -42,7 +42,7 @@ public class _04_TAB {
         c.myClick(c.homepage);
     }
 
-    @When("In the user tab menu, hover over Training")
+    @Then("In the user tab menu, hover over Training")
     public void ınTheUserTabMenuHoverOverTraining() {
         actions.moveToElement(c.training)
                 .moveToElement(c.video)
