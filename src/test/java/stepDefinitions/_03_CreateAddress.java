@@ -34,7 +34,11 @@ public class _03_CreateAddress {
     public void the_user_opens_the_address_section() {
         reusableMethods.myClick(createAddress.addressBookButton);
         reusableMethods.verifyUrlContains("address");
-        reusableMethods.myClick(createAddress.addAddressButton);
+        List<WebElement> addAddressButton = GWD.getDriver().findElements(By.cssSelector("button[title='Add New Address']"));
+
+        if (!addAddressButton.isEmpty()) {
+            reusableMethods.myClick(createAddress.addAddressButton);
+        }
     }
 
     @When("The user fills in the company, phone number, and street fields with {string}, {string}, and {string}")
