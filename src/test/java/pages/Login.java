@@ -23,6 +23,6 @@ public class Login {
     @FindBy(id = "send2")
     public WebElement loginClickButton;
 
-    @FindBy(xpath = "//div[@class='panel header']//span[@class='logged-in']")
+    @FindBy(xpath = "(//span[@class='logged-in'])[1]")
     public  WebElement welcomeMesseageText;
 }
