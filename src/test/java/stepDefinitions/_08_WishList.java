@@ -46,5 +46,6 @@ public class _08_WishList extends ReusableMethods {
     @Then("A confirmation message after removing {string} should be visible")
     public void removeConfirmationMessageShouldBeVisible(String expectedMessage) {
         verifyContainsText(wishList.removeSuccessMessage, expectedMessage);
+        GWD.quitDriver();
     }
 }

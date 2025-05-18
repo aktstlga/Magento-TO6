@@ -2,6 +2,7 @@ package stepDefinitions;
 
 import io.cucumber.java.en.*;
 import pages.CartTransactions;
+import utilities.GWD;
 
 public class _05_CartTransactions {
     CartTransactions c = new CartTransactions();
@@ -15,6 +16,8 @@ public class _05_CartTransactions {
         c.qty.clear();
         c.mySendKeys(c.qty,"2");
         c.myClick(c.addbutton);
+
+        GWD.quitDriver();
     }
 }
 

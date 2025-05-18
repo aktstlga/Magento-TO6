@@ -60,5 +60,7 @@ public class _06_ProductOrdering {
                 ExpectedConditions.visibilityOfElementLocated(By.cssSelector("div.checkout-success"))
         );
         Assert.assertTrue(successContainer.isDisplayed(), "Checkout success container is not visible!");
+
+        GWD.quitDriver();
     }
 }

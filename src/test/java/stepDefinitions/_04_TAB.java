@@ -50,5 +50,7 @@ public class _04_TAB {
                 .build()
                 .perform();
         c.myClick(c.homepage);
+
+        GWD.quitDriver();
     }
 }

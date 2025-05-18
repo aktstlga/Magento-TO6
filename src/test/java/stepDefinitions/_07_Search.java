@@ -41,5 +41,6 @@ public class _07_Search extends ReusableMethods {
     @Then("A message {string} should be displayed")
     public void aMessageShouldBeDisplayed(String expectedMessage) {
         verifyEqualsText(search.noResultWarning, expectedMessage);
+        GWD.quitDriver();
     }
 }
