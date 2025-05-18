@@ -7,21 +7,10 @@ import utilities.GWD;
 import utilities.ReusableMethods;
 
 public class CartTransactions extends ReusableMethods {
+
     public CartTransactions() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
-
-    @FindBy(xpath = "(//li[@class='authorization-link'])[1]/a")
-    public WebElement singın;
-
-    @FindBy(xpath = " //input[@name='login[username]']")
-    public WebElement email;
-
-    @FindBy(xpath = " //input[@name='login[password]']")
-    public WebElement password;
-
-    @FindBy(xpath = " (//div[@class='primary'])[1]/button")
-    public WebElement sıgnınbutton;
 
     @FindBy(xpath = "//*[text()='Men']")
     public WebElement men;
@@ -70,7 +59,5 @@ public class CartTransactions extends ReusableMethods {
 
     @FindBy(xpath = "//*[text()='Video Download']")
     public WebElement video;
-
-
 
 }

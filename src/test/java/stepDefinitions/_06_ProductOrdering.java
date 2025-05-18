@@ -13,7 +13,6 @@ import utilities.ReusableMethods;
 import java.time.Duration;
 
 public class _06_ProductOrdering {
-
     ProductOrdering p = new ProductOrdering();
     ReusableMethods r = new ReusableMethods();
 

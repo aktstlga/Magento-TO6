@@ -7,6 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.ReusableMethods;
 
 public class Register extends ReusableMethods {
+
     public Register() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
@@ -32,6 +33,4 @@ public class Register extends ReusableMethods {
     @FindBy(css = "button[class='action submit primary']")
     public WebElement accountButton;
 
-    @FindBy(css = "a[class='logo'] > *:nth-child(1)")
-    public  WebElement mainPageButton;
 }

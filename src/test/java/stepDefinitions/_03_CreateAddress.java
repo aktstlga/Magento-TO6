@@ -12,16 +12,6 @@ import java.util.List;
 public class _03_CreateAddress {
     ReusableMethods reusableMethods = new ReusableMethods();
     pages.CreateAddress createAddress = new pages.CreateAddress();
-    Faker faker = new Faker();
-
-    @Given("The user logs")
-    public void the_user_logs_in() {
-        GWD.getDriver().get("https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2xvZ291dFN1Y2Nlc3Mv/");
-        GWD.getDriver().findElement(By.id("email")).sendKeys("deneme123321@gmail.com");
-        GWD.getDriver().findElement(By.id("pass")).sendKeys("TOLgadeneme123321");
-        GWD.getDriver().findElement(By.id("send2")).click();
-        reusableMethods.myClick(createAddress.mainPageButton);
-    }
 
     @Given("The user navigates to the My Account section")
     public void the_user_navigates_to_the_my_account_section() {

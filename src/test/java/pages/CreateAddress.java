@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
 public class CreateAddress {
+
     public CreateAddress() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
@@ -34,8 +35,6 @@ public class CreateAddress {
     @FindBy(id = "zip")
     public WebElement zipCode;
 
-    @FindBy(css = "div[class='field region required']")
-    public WebElement requiredId;
 
     @FindBy(id = "region")
     public WebElement stateSendKeys;

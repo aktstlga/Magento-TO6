@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
 public class Login {
+
     public Login() {
         PageFactory.initElements(GWD.getDriver(), this);
     }

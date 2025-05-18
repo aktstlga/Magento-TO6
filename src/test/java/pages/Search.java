@@ -16,9 +16,6 @@ public class Search {
     @FindBy(css = "strong.product.name.product-item-name a")
     public WebElement searchResultItem;
 
-    @FindBy(css = "span.base")
-    public WebElement productTitle;
-
     @FindBy(css = "div.product.attribute.sku > div.value")
     public WebElement productSKU;
 

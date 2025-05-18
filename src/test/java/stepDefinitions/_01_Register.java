@@ -38,7 +38,5 @@ public class _01_Register {
         register.myClick(register.accountButton);
 
         GWD.quitDriver();
-
-
     }
 }

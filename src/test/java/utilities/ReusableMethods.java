@@ -14,7 +14,6 @@ import java.time.Duration;
 
 public class ReusableMethods {
     public WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
-    public Actions action = new Actions(GWD.getDriver());
 
     public void scrollToElement(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
@@ -89,12 +88,5 @@ public class ReusableMethods {
         wait.until(ExpectedConditions.visibilityOf(element));
         Select select = new Select(element);
         select.selectByVisibleText(text.trim());
-    }
-
-    public void myActionClick(WebElement element) {
-        scrollToElement(element);
-        wait.until(ExpectedConditions.visibilityOf(element));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-        action.moveToElement(element).click().build().perform();
     }
 }
