@@ -30,5 +30,6 @@ public class _02_Login {
     public void user_should_login_successfully() {
         reusableMethods.wait.until(ExpectedConditions.textToBePresentInElement(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName")));
         reusableMethods.verifyContainsText(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName"));
+        GWD.quitDriver();
     }
 }
