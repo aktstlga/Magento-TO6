@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 import pages.CartTransactions;
 import io.cucumber.java.en.*;
 import utilities.GWD;
