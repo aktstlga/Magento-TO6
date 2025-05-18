@@ -5,7 +5,7 @@ Feature: : Adding a new address to the user profile
     When Enter E-mail and and password and click on the login button
     Then User should login successfully
 
-    @Regression
+  @Regression
   Scenario Outline: User adds a new address with valid information
     And The user navigates to the My Account section
     And The user opens the address section
@@ -14,6 +14,7 @@ Feature: : Adding a new address to the user profile
     And The user saves the address
 
     Examples:
-      | company       | phoneNumber | street       | city     | state   | zipCode | country        |
-      | companyRandom | phoneRandom | streetRandom | city     | asd     | AB12    | United Kingdom |
-      | TechnoStudy   | 1233333     | Michigan.asd | New York | Alabama | AB12    | United States  |
+      | company         | phoneNumber       | street                | city        | state    | zipCode  | country        |
+      | Thornridge Ltd  | +44 7911 123456   | 221B Baker Street     | London      | England  | AB12 3CD | United Kingdom |
+      | Greenvale Foods | +44 7700 900123   | 58 Rosehill Avenue    | Manchester  | England  | M14 5LT  | United Kingdom |
+      | Redwood Systems | +1 (415) 555-0198 | 742 Evergreen Terrace | Springfield | Illinois | 62704    | United States  |
