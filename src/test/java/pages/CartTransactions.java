@@ -59,5 +59,4 @@ public class CartTransactions extends ReusableMethods {
 
     @FindBy(xpath = "//*[text()='Video Download']")
     public WebElement video;
-
 }

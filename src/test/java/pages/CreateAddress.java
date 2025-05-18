@@ -35,7 +35,6 @@ public class CreateAddress {
     @FindBy(id = "zip")
     public WebElement zipCode;
 
-
     @FindBy(id = "region")
     public WebElement stateSendKeys;
 
