@@ -44,7 +44,7 @@ public class ConfigReader {
                 break;
             case "firstName":
                 String name = dataFaker.name().firstName();
-                properties.setProperty(keyword, firstName);
+                properties.setProperty(keyword, name);
                 break;
         }
 
