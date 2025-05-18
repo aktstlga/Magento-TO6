@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import pages.Login;
 import utilities.ConfigReader;
 import utilities.GWD;
@@ -27,6 +28,7 @@ public class _02_Login {
 
     @Then("User should login successfully")
     public void user_should_login_successfully() {
-        reusableMethods.verifyContainsText(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName"));
+        // reusableMethods.verifyContainsText(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName"));
+        reusableMethods.wait.until(ExpectedConditions.textToBePresentInElement(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName")));
     }
 }
