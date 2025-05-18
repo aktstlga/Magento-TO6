@@ -1,7 +1,7 @@
 
 Feature: Register functionality
 
-  @Smoke @Regression @Accounts
+  @SmokeTest @Regression @Accounts
   Scenario:Register with valid information
     Given Navigate to Magento
     And Navigate to Create an Account Site

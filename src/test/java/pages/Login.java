@@ -10,7 +10,7 @@ public class Login {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(css = "a[href='https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS8%2C/']")
+    @FindBy(linkText = "Sign In")
     public WebElement signInButtonOnMainPage;
 
     @FindBy(id = "email")

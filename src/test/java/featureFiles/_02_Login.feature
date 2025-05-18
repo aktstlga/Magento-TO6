@@ -1,4 +1,5 @@
 Feature: Login functionality
+
   @SmokeTest
   Scenario: Login with valid e-mail and password
     Given Navigate to Magento and Login Page
