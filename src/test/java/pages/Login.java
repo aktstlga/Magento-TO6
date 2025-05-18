@@ -10,7 +10,7 @@ public class Login {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-    @FindBy(linkText = "Sign In")
+    @FindBy(css = "div[class='panel header'] li[data-label='or'] a")
     public WebElement signInButtonOnMainPage;
 
     @FindBy(id = "email")
