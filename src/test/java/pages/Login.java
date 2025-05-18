@@ -23,6 +23,6 @@ public class Login {
     @FindBy(id = "send2")
     public WebElement loginClickButton;
 
-    @FindBy(css = "div[class='panel header'] span[class='logged-in']")
+    @FindBy(css = "li[class='greet welcome'] [style]")
     public  WebElement welcomeMesseageText;
 }
