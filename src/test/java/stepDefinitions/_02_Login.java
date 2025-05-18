@@ -31,4 +31,11 @@ public class _02_Login {
         reusableMethods.wait.until(ExpectedConditions.textToBePresentInElement(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName")));
         reusableMethods.verifyContainsText(loginElements.welcomeMesseageText, ConfigReader.getProperty("firstName"));
     }
+
+    @And("User should logout and close the page")
+    public void userShouldLogoutAndCloseThePage() {
+        reusableMethods.myClick(loginElements.openSectionsMenu);
+        reusableMethods.myClick(loginElements.signOutButton);
+        GWD.quitDriver();
+    }
 }

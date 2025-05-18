@@ -25,4 +25,10 @@ public class Login {
 
     @FindBy(xpath = "(//span[@class='logged-in'])[1]")
     public  WebElement welcomeMesseageText;
+
+    @FindBy(css = "div[class='panel header'] button[type='button']")
+    public WebElement openSectionsMenu;
+
+    @FindBy(css = "div[aria-hidden='false'] li[data-label='or'] a")
+    public WebElement signOutButton;
 }
