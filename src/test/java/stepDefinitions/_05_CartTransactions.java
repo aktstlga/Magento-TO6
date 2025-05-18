@@ -14,9 +14,8 @@ public class _05_CartTransactions {
         c.myClick(c.size);
         c.myClick(c.color);
         c.qty.clear();
-        c.mySendKeys(c.qty,"2");
+        c.mySendKeys(c.qty, "2");
         c.myClick(c.addbutton);
-
         GWD.quitDriver();
     }
 }

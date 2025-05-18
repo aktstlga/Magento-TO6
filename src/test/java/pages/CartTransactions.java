@@ -18,13 +18,13 @@ public class CartTransactions extends ReusableMethods {
     @FindBy(xpath = "//a[@title='Hero Hoodie']")
     public WebElement clothes;
 
-    @FindBy(xpath = "(//*[text()='S'])[1]")
+    @FindBy(xpath = "//div[@option-label='S']")
     public WebElement size;
 
-    @FindBy(xpath = "//div[@id='option-label-color-93-item-49']")
+    @FindBy(id = "option-label-color-93-item-49")
     public WebElement color;
 
-    @FindBy(xpath = "(//div[@class='control'])[2]/input")
+    @FindBy(xpath = "//input[@id='qty']")
     public WebElement qty;
 
     @FindBy(xpath = "//*[text()='Add to Cart']")
