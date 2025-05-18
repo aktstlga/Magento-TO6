@@ -6,7 +6,7 @@ Feature: Cart Transactions functionality
     Then User should login successfully
 
   Scenario: Adding and removing products from the cart
-    Then In the user tab menu, navigate to Women branches
-    And In the user tab menu, navigate to Men branches
+    Given In the user tab menu, navigate to Women branches
+    Then In the user tab menu, navigate to Men branches
     And In the user tab menu, navigate to Gear
     Then In the user tab menu, hover over Training
