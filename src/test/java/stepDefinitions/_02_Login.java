@@ -1,15 +1,14 @@
 package stepDefinitions;
 
 import io.cucumber.java.en.*;
-import org.testng.Assert;
-import pages.LoginPOM;
+import pages.Login;
 import utilities.ConfigReader;
 import utilities.GWD;
 import utilities.ReusableMethods;
 
 public class _02_Login {
     ReusableMethods reusableMethods = new ReusableMethods();
-    LoginPOM loginElements = new LoginPOM();
+    Login loginElements = new Login();
 
     @Given("Navigate to Magento and Login Page")
     public void navigate_to_magento_and_login_page() {

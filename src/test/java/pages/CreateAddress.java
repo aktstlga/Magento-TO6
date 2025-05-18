@@ -5,8 +5,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.GWD;
 
-public class CreateAddressPOM {
-    public CreateAddressPOM() {
+public class CreateAddress {
+    public CreateAddress() {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 

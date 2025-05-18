@@ -4,16 +4,14 @@ import io.cucumber.java.en.*;
 import net.datafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Wait;
-import pages.CreateAddressPOM;
 import utilities.GWD;
 import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class CreateAddress {
+public class _03_CreateAddress {
     ReusableMethods reusableMethods = new ReusableMethods();
-    CreateAddressPOM createAddress = new CreateAddressPOM();
+    pages.CreateAddress createAddress = new pages.CreateAddress();
     Faker faker = new Faker();
 
     @Given("The user logs")
