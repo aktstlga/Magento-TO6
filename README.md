@@ -105,17 +105,18 @@ It verifies core e-commerce functionality, including user registration, login, c
 - Jira  (Test Management)
 - ExtentReports (Custom Reporting)
 - Page Object Model (POM Design Pattern)
-- 
-## 📁 Project Structure
-src
-├── test
-│    java
-│       ├── stepdefinitions/ # Cucumber step definitions
-│       ├── runners/         # TestNG/Cucumber runners
-│       └── features/        # Gherkin .feature files 
-│       ├── pages/           # Page Object Model classes 
-│       ├── utilities/       # Config reader, logger, base driver, etc.
-│       ├── hooks/           # Cucumber Hooks (Before, After, etc.)
-├── configuration.properties # Central config (browser, baseURL, timeouts, etc.)
-├── pom.xml                  # Maven dependencies and build configuration
-├── README.md                # Project documentation
+
+  
+# 👨‍💻 QA Team
+
+| İsim           | GitHub Profili                                      |
+|----------------|------------------------------------------------------|
+| Merve Kıtır     | [github.com/mervektr](https://github.com/mervektr)         |
+| Mert Saraç      | [github.com/meertsarac](https://github.com/meertsarac)     |
+| Barış Sancar    | [github.com/brssncr](https://github.com/brssncr)           |
+| Tolga Aktaş     | [github.com/aktstlga](https://github.com/aktstlga)         |
+| Mert Canat      | [github.com/MertCanat91](https://github.com/MertCanat91)   |
+| Berk Gültekin   | [github.com/berkgltkn](https://github.com/berkgltkn)       |
+
+
+> This project is part of an automation framework designed for QA/SDET training and portfolio development.
