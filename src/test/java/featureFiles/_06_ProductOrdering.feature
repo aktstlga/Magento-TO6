@@ -4,7 +4,7 @@ Feature: Product Ordering Process
     Given Navigate to Magento and Login Page
     When Enter E-mail and and password and click on the login button
 
-  @Regression
+  @SmokeTest
   Scenario: Order a product with existing Address Book address
     And User selects a product from Men's section and adds it to the cart
     And User proceeds to checkout

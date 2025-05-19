@@ -4,6 +4,6 @@ Feature: Cart Transactions functionality
     Given Navigate to Magento and Login Page
     When Enter E-mail and and password and click on the login button
 
-
+  @SmokeTest
   Scenario: Adding and removing products from the cart
     Given User should purchase an item from the men's section

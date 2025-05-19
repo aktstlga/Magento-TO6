@@ -5,7 +5,6 @@ Feature: : Adding a new address to the user profile
     When Enter E-mail and and password and click on the login button
     Then User should login successfully
 
-  @Regression
   Scenario Outline: User adds a new address with valid information
     And The user navigates to the My Account section
     And The user opens the address section
