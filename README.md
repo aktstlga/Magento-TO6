@@ -105,20 +105,21 @@ It verifies core e-commerce functionality, including user registration, login, c
 - Jira  (Test Management)
 - ExtentReports (Custom Reporting)
 - Page Object Model (POM Design Pattern)
-
+- 
 ## 📁 Project Structure
-├── src
-│ ├── test
-│ │ ├── java
-│ │ │ ├── stepDefinitions
-│ │ │ ├── pageObjects
-│ │ │ └── runners
-│ │ │ └── pages
-│ │ │ └── featureFiles
-│ │ │ └──utilities
-│ │ │ └──hooks
-│ │ ├── resources
-│ │ │ ├── extent.properties
-├── configuration.properties
-├── pom.xml
-└── README.md
+Magento-T06/
+├── src/
+│ └── test/
+│ ├── java/
+│ │ ├── stepDefinitions/ # Step definitions mapped to Gherkin steps
+│ │ ├── pageObjects/ # Page Object Model classes for UI elements
+│ │ ├── runners/ # Test runner classes for executing feature files
+│ │ ├── pages/ # Page-related reusable methods (optional layer)
+│ │ ├── featureFiles/ # Gherkin feature files (*.feature)
+│ │ ├── utilities/ # Utility classes (e.g., WebDriver, ConfigReader)
+│ │ └── hooks/ # Cucumber hooks (Before, After scenarios)
+│ └── resources/
+│ └── extent.properties # Extent Report configuration file
+├── configuration.properties # Global configuration (e.g., browser, baseURL)
+├── pom.xml # Maven project file with dependencies & plugins
+└── README.md # Project documentation
