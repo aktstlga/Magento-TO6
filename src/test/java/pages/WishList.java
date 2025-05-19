@@ -17,7 +17,7 @@ public class WishList {
     @FindBy(css = "button[title='Search']")
     public WebElement searchButton;
 
-    @FindBy(css = "img[alt='Lando Gym Jacket']")
+    @FindBy(xpath = "//img[@alt='Lando Gym Jacket']")
     public WebElement productImage;
 
     @FindBy(xpath = "//span[text()='Add to Wish List']")
@@ -31,5 +31,4 @@ public class WishList {
 
     @FindBy(xpath = "//div[@class='message-success success message']//div[contains(text(),'has been removed from your Wish List')]")
     public WebElement removeSuccessMessage;
-
 }
