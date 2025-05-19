@@ -107,19 +107,15 @@ It verifies core e-commerce functionality, including user registration, login, c
 - Page Object Model (POM Design Pattern)
 - 
 ## 📁 Project Structure
-Magento-T06/
-├── src/
-│ └── test/
-│ ├── java/
-│ │ ├── stepDefinitions/ # Step definitions mapped to Gherkin steps
-│ │ ├── pageObjects/ # Page Object Model classes for UI elements
-│ │ ├── runners/ # Test runner classes for executing feature files
-│ │ ├── pages/ # Page-related reusable methods (optional layer)
-│ │ ├── featureFiles/ # Gherkin feature files (*.feature)
-│ │ ├── utilities/ # Utility classes (e.g., WebDriver, ConfigReader)
-│ │ └── hooks/ # Cucumber hooks (Before, After scenarios)
-│ └── resources/
-│ └── extent.properties # Extent Report configuration file
-├── configuration.properties # Global configuration (e.g., browser, baseURL)
-├── pom.xml # Maven project file with dependencies & plugins
-└── README.md # Project documentation
+src
+├── test
+│    java
+│       ├── stepdefinitions/ # Cucumber step definitions
+│       ├── runners/         # TestNG/Cucumber runners
+│       └── features/        # Gherkin .feature files 
+│       ├── pages/           # Page Object Model classes 
+│       ├── utilities/       # Config reader, logger, base driver, etc.
+│       ├── hooks/           # Cucumber Hooks (Before, After, etc.)
+├── configuration.properties # Central config (browser, baseURL, timeouts, etc.)
+├── pom.xml                  # Maven dependencies and build configuration
+├── README.md                # Project documentation
